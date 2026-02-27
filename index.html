@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My School Trip - Bahawalpur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header .sub-title {
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        header .location {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .stop {
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .stop::before {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background: #ffd700;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -17px;
+            border: 4px solid white;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .stop:nth-child(1)::before { content: '1️⃣'; }
+        .stop:nth-child(2)::before { content: '2️⃣'; }
+        .stop:nth-child(3)::before { content: '3️⃣'; }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 15px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .stop-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .stop-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #f5af19, #f12711);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .stop h2 {
+            color: #1e3c72;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .stop p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .highlights {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .highlights li {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            color: #444;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        footer {
+            background: #0f0c29;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        footer h2 {
+            color: #ffd700;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        footer .student-info {
+            font-size: 1.3rem;
+            margin-top: 15px;
+            color: #ddd;
+        }
+
+        footer .emoji {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .stop::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🎒 My School Trip</h1>
+        <p class="sub-title">📍 Bahawalpur, Pakistan</p>
+        <p class="location">🚌 An Amazing Journey with Friends</p>
+    </header>
+
+    <div class="container">
+        <div class="timeline">
+            
+            <!-- Stop 1: Noor Mahal -->
+            <div class="stop">
+                <div class="photo-gallery">
+                    <!-- ADD YOUR NOOR MAHAL PHOTOS HERE -->
+                    <!-- Replace src with your photo file names -->
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="Noor Mahal 1">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400" alt="Noor Mahal 2">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="Noor Mahal 3">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="Noor Mahal 4">
+                </div>
+                <div class="stop-content">
+                    <span class="stop-number">🚌 Stop 1</span>
+                    <h2>🏛️ Noor Mahal</h2>
+                    <p>The beautiful Noor Mahal is one of the most famous historical monuments in Bahawalpur. This stunning palace was built in 1872 by Nawab Sir Sadiq Muhammad Khan Abbasi. The architecture is absolutely magnificent!</p>
+                    <ul class="highlights">
+                        <li>📸 Took amazing photos with friends</li>
+                        <li>🏰 Loved the beautiful architecture</li>
+                        <li>🌟 Great memories at this historic place</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stop 2: Islamia University -->
+            <div class="stop">
+                <div class="photo-gallery">
+                    <!-- ADD YOUR ISLAMIA UNIVERSITY PHOTOS HERE -->
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="University 1">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="University 2">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="University 3">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="University 4">
+                </div>
+                <div class="stop-content">
+                    <span class="stop-number">🚌 Stop 2</span>
+                    <h2>🎓 The Islamia University</h2>
+                    <p>Visited the prestigious Islamia University of Bahawalpur, one of the oldest and most respected universities in Pakistan. The campus is beautiful with great buildings and greenery everywhere.</p>
+                    <ul class="highlights">
+                        <li>📚 Amazing and beautiful campus</li>
+                        <li>🏫 Learned about the university</li>
+                        <li>💫 Felt inspired for the future</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stop 3: World Park -->
+            <div class="stop">
+                <div class="photo-gallery">
+                    <!-- ADD YOUR WORLD PARK PHOTOS HERE -->
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="World Park 1">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="World Park 2">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="World Park 3">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400" alt="World Park 4">
+                </div>
+                <div class="stop-content">
+                    <span class="stop-number">🚌 Stop 3</span>
+                    <h2>🎢 World Park</h2>
+                    <p>Had the most fun at World Park! This is the best amusement park in Bahawalpur with exciting rides, fun games, and lots of activities. It was the perfect way to end an amazing trip!</p>
+                    <ul class="highlights">
+                        <li>🎡 Enjoyed the exciting rides</li>
+                        <li>🎮 Played fun games</li>
+                        <li>😂 Best time ever with friends</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <h2>🎊 Trip Completed!</h2>
+        <p class="emoji">📸 🎒 🚌 😊</p>
+        <p class="student-info">Made by <strong>Izhar Ali Channa</strong></p>
+        <p class="student-info">Class: 1st Year</p>
+        <p style="margin-top: 20px; color: #888;">Thank you for following our amazing journey through Bahawalpur</p>
+    </footer>
+
+</body>
+  </html>
